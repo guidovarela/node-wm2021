@@ -12,6 +12,7 @@ var contactoRouter = require('./routes/contacto');
 var productosRouter = require('./routes/productos');
 var altaproductosRouter = require('./routes/altaProducto');
 var editarProd = require('./routes/editarProd')
+var borrarProd = require('./routes/borrarProd')
 //formato de importacion de ES10 -> import {productoRouter} from './routes/productos.js'
 
 var app = express();
@@ -36,6 +37,7 @@ app.use('/contacto', contactoRouter);
 app.use('/productos', productosRouter);
 app.use('/nuevo-producto', altaproductosRouter);
 app.use('/edit-prod', editarProd);
+app.use('/delete-prod', borrarProd);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
