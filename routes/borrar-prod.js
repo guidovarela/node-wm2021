@@ -7,6 +7,10 @@ const tablaProductos = require('../models/tablaProductos');
 let title = "Alta de productos"
 let year = new Date().getFullYear();
 
+router.get('/', (req,res) => {
+    res.redirect('index')
+})
+
 router.get('/:id', async (req,res) => {
     let paramURL = req.params.id
     let borrarProd = await tablaProductos.destroy({
